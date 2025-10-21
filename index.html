@@ -31,10 +31,10 @@
         <h3>📝 Create New Task</h3>
 
         <form>
-          <label>Task Name *</label>
+          <label></label>
           <input type="text" placeholder="Task Name *" required>
 
-          <label>Assignee Email *</label>
+          <label> </label>
           <input type="email" placeholder="Assignee Email *" required>
 
           <label>Due Date *</label>
@@ -53,10 +53,10 @@
           <label>Estimated Hours</label>
           <input type="number" placeholder="Estimated Hours">
 
-          <label>Project URL</label>
+          <label> </label>
           <input type="url" placeholder="Project URL">
 
-          <label>Task Description</label>
+          <label> </label>
           <textarea placeholder="Task Description"></textarea>
 
           <label>Task Progress</label>
@@ -95,7 +95,10 @@
 
           <div class="buttons">
             <button type="submit" class="create-btn">✓ Create Task</button>
-            <button type="reset" class="reset-btn">✕ Reset</button>
+            <button type="reset" class="reset-btn">
+              <span class="reset-icon">✖</span>
+              <span class="reset-text">Reset</span>
+            </button>
           </div>
         </form>
       </section>
@@ -183,7 +186,7 @@
       <ul>
         <li>Documentation</li>
         <li>Tutorials</li>
-        <li>API References</li>
+        <li>API Reference</li>
         <li>Support</li>
       </ul>
     </div>
@@ -198,15 +201,11 @@
       </ul>
     </div>
   </div>
-
-  
   <hr>
 
   <div class="footer-bottom">
-    <p>© 2025 TaskManager. All rights reserved. Built with <span class="heart">❤</span> for productivity.</p>
+    © 2025 TaskManager. All rights reserved. Built with ❤️ for productivity.
   </div>
 </footer>
-
-
 </body>
 </html>

@@ -50,7 +50,6 @@ body {
   color: #6c63ff;
 }
 
-/* Dashboard */
 .dashboard {
   padding: 30px 50px;
 }
@@ -82,6 +81,16 @@ body {
   flex-direction: column;
   gap: 12px;
 }
+
+input[placeholder="Task Name *"],
+input[placeholder="Assignee Email *"],
+input[type="date"] {
+  border: 1.5px solid red;
+}
+textarea[placeholder="Task Description"]{
+  padding: 30px;
+}
+
 
 input, select, textarea {
   padding: 10px;
@@ -170,30 +179,65 @@ h4 {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
+  color: #333;
+  font-size: 0.95rem;
+}
+.file-upload p {
+  color: #000; ;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.file-upload span {
+  display: block;
   color: #777;
-  font-size: 0.9rem;
+  margin-top: 6px;
+  font-size: 0.7rem;
 }
 
 .buttons {
   display: flex;
-  gap: 10px;
+  gap: 15px;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .create-btn {
-  background: #6c63ff;
+  background: blue;
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 10px;
+  padding: 14px 25px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  height: 60px;
+  width: 200px;
 }
 
 .reset-btn {
-  background: #f4f4f4;
+  background: lightgray;
   border: none;
   border-radius: 8px;
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
+  height: 60px;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: black;
+}
+
+.reset-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.reset-text {
+  font-size: 13px;
+  margin-top: 3px;
 }
 
 .active-tasks {
@@ -278,23 +322,32 @@ h4 {
 .status.completed { color: #16a34a; }
 
 .footer {
-  background-color: #fff;
-  padding: 50px 10%;
-  color: #334155;
-  font-family: "Inter", sans-serif;
-  border-top: 1px solid #e2e8f0;
+  background-color: #f9fafb;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #e5e7eb;
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px 20px;
 }
 
 .footer-col h4 {
-  color: #0f172a;
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-size: 16px;
+  color: #111827;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .footer-col ul {
@@ -303,49 +356,19 @@ h4 {
 }
 
 .footer-col ul li {
-  margin: 6px 0;
-  font-size: 0.95rem;
-  color: #475569;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-size: 14px;
 }
 
-hr {
-  margin: 30px 0;
-  border: 0;
-  border-top: 1px solid #e2e8f0;
+.footer-col ul li:hover {
+  color: #111827;
+  cursor: pointer;
 }
 
 .footer-bottom {
   text-align: center;
-  font-size: 0.9rem;
-  color: #64748b;
-}
-
-.footer-bottom .heart {
-  color: #ef4444;
-}
-
-
-@media (max-width: 900px) {
-  .dashboard-content {
-    grid-template-columns: 1fr;
-  }
-
-  .active-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .filter-btns {
-    margin-top: 10px;
-  }
-
-  .task-options {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .task-type, .task-status {
-    width: 100%;
-    text-align: center;
-  }
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 13px;
 }
