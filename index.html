@@ -14,6 +14,8 @@
       <div class="logo-icon">TM</div>
       <h1>TaskManager</h1>
     </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">☰</label>
     <nav class="nav-links">
       <a href="#" class="active">Dashboard</a>
       <a href="#">Tasks</a>
@@ -37,8 +39,8 @@
           <label> </label>
           <input type="email" placeholder="Assignee Email *" required>
 
-          <label>Due Date *</label>
-          <input type="date" required>
+          <label class="required">Due Date *</label>
+          <input type="date" class="error">
 
           <label>Due Time</label>
           <input type="time">
@@ -61,8 +63,8 @@
 
           <label>Task Progress</label>
           <div class="progress-container">
-            <input type="range" value="0" min="0" max="100">
-            <span>0%</span>
+            <input type="range" value="0" min="0" max="100"><br>
+            <span class="Percent">0%</span>
           </div>
 
           <label>Task Color</label>
@@ -118,43 +120,49 @@
           <div class="task-card high">
             <h4>Design Homepage Mockup</h4>
             <p>Create wireframes and mockups for the new homepage redesign project.</p>
-            <div class="meta"><span>📅 Oct 20, 2025</span> <span>👤 Sarah Johnson</span></div>
-            <div class="tags"><span class="priority high">HIGH</span><span class="status in-progress">In Progress</span></div>
+            <div class="meta"><span>📅 Oct 20, 2025</span></div> 
+            <div class="meta"><span>👤 Sarah Johnson</span></div>
+            <div class="tags"><span class="priority high">● HIGH</span><span class="status in-progress"><span class="dot-progress">●</span> In Progress</span></div>
           </div>
 
           <div class="task-card high">
             <h4>Fix Login Authentication Bug</h4>
             <p>Resolve the issue where users are logged out unexpectedly after inactivity.</p>
-            <div class="meta"><span>📅 Oct 15, 2025</span> <span>👤 Michael Chen</span></div>
-            <div class="tags"><span class="priority high">HIGH</span><span class="status pending">Pending</span></div>
+            <div class="meta"><span>📅 Oct 15, 2025</span></div>
+            <div class="meta"><span>👤 Michael Chen</span></div>
+            <div class="tags"><span class="priority high">● HIGH</span><span class="status pending"><span class="dot-pending">●</span> Pending</span></div>
           </div>
 
           <div class="task-card medium">
             <h4>Update Documentation</h4>
             <p>Review and update the API documentation with the latest endpoint changes.</p>
-            <div class="meta"><span>📅 Oct 25, 2025</span> <span>👤 Emily Rodriguez</span></div>
-            <div class="tags"><span class="priority medium">MEDIUM</span><span class="status in-progress">In Progress</span></div>
+            <div class="meta"><span>📅 Oct 25, 2025</span> </div>
+            <div class="meta"><span>👤 Emily Rodriguez</span></div>
+            <div class="tags"><span class="priority medium">● MEDIUM</span><span class="status in-progress"><span class="dot-progress">●</span> In Progress</span></div>
           </div>
 
           <div class="task-card medium">
             <h4>Database Optimization</h4>
             <p>Optimize slow queries to improve overall database performance.</p>
-            <div class="meta"><span>📅 Oct 30, 2025</span> <span>👤 David Kim</span></div>
-            <div class="tags"><span class="priority medium">MEDIUM</span><span class="status pending">Pending</span></div>
+            <div class="meta"><span>📅 Oct 30, 2025</span></div>
+            <div class="meta"> <span>👤 David Kim</span></div>
+            <div class="tags"><span class="priority medium">● MEDIUM</span><span class="status pending"><span class="dot-pending">●</span> Pending</span></div>
           </div>
 
           <div class="task-card low">
             <h4>Implement Dark Mode</h4>
             <p>Add dark mode support with preference persistence.</p>
-            <div class="meta"><span>📅 Nov 05, 2025</span> <span>👤 Alex Thompson</span></div>
-            <div class="tags"><span class="priority low">LOW</span><span class="status pending">Pending</span></div>
+            <div class="meta"><span>📅 Nov 05, 2025</span></div> 
+            <div class="meta"> <span>👤 Alex Thompson</span></div>
+            <div class="tags"><span class="priority low">● LOW</span><span class="status pending"><span class="dot-pending">●</span> Pending</span></div>
           </div>
 
           <div class="task-card high">
             <h4>User Testing Session</h4>
             <p>Conduct user testing sessions to gather feedback on the interface.</p>
-            <div class="meta"><span>📅 Oct 28, 2025</span> <span>👤 Lisa Anderson</span></div>
-            <div class="tags"><span class="priority high">HIGH</span><span class="status completed">Completed</span></div>
+            <div class="meta"><span>📅 Oct 28, 2025</span></div> 
+             <div class="meta"><span>👤 Lisa Anderson</span></div>
+            <div class="tags"><span class="priority high">● HIGH</span><span class="status completed"><span class="dot-completed">●</span> Completed</span></div>
           </div>
         </div>
       </section>
