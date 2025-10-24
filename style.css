@@ -107,11 +107,22 @@ body {
   color: #666;
   font-size: 14px;
   pointer-events: none;
-  transition: 0.2s ease all;
+  transition: none;
 }
+#estimatedHours + label {
+  top: 0;
+  left: 10px;
+  font-size: 12px;
+  color: #2434ec;
+}
+input[type="number"]::placeholder {
+  opacity: 0;
+}
+
 
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label,
+.form-group input[type="number"]:valid + label,
 .form-group select:focus + label,
 .form-group select:not([value=""]) + label {
   top: 0;
