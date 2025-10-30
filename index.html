@@ -7,25 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-
-  <header class="navbar">
+<header class="navbar">
     <div class="logo">
-      <div class="logo-icon">TM</div>
+        <div class="logo-icon">TM</div>
       <h1>TaskManager</h1>
     </div>
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
   <label for="menu-toggle" class="menu-icon">☰</label>
     <nav class="nav-links">
       <a href="#" class="active">Dashboard</a>
-      <a href="#">Tasks</a>
-      <a href="#">Profile</a>
+      <a href="#" class="inactive">Tasks</a>
+      <a href="#" class="inactive">Profile</a>
     </nav>
   </header>
 
   
   <main class="dashboard">
-    <h2 class="dashboard-title">| Task Dashboard</h2>
+    <h2 class="dashboard-title"><span style="color:rgb(109, 109, 255)">| </span> Task Dashboard</h2>
 
     <div class="dashboard-content">
   <section class="create-task">
@@ -57,23 +55,30 @@
       </div>
 
        <div class="form-group">
-      <input type="number" id="estimatedHours" name="estimatedHours" placeholder="" required>
-      <label for="estimatedHours">Estimated Hours</label>
-      </div>
-
-          <label></label>
+      <input type="number" id="estimatedHours" name="estimatedHours" placeholder="" required max="1000000" 
+       onkeydown="return !['e','E','+','-'].includes(event.key)" 
+       oninput="if(this.value > 1000000) this.value = 1000000;"
+       >
+       <label for="estimatedHours">Estimated Hours</label>
+       </div>
+       <div class="form-place">
+         <label></label>
           <input type="url" placeholder="Project URL">
           <label></label>
+       </div>
+         <div class="form-describe">
           <textarea placeholder="Task Description"></textarea>
+         </div>
 
           <label>Task Progress</label>
           <div class="progress-container">
             <input type="range" value="0" min="0" max="100">
             <span class="Percent">0%</span>
           </div>
-
+          
           <label>Task Color</label>
           <input type="color" value="#000000">
+           
 
           <div class="task-options">
             <div class="task-type">
@@ -97,8 +102,13 @@
           </div>
 
           <div class="file-upload">
-            <p>📎 Click to upload attachments<br><span>Supported: PDF, DOC, Images</span></p>
-          </div>
+         <label for="fileInput">
+         📎 Click to upload attachments<br>
+         <span>Supported: PDF, DOC, Images</span>
+         </label>
+         <input type="file" id="fileInput" accept=".pdf,.doc,.docx,image/*" multiple>
+         </div>
+
 
           <div class="buttons">
             <button type="submit" class="create-btn">✓ Create Task</button>
@@ -124,9 +134,9 @@
         <div class="task-grid">
           <div class="task-card high">
             <h4>Design Homepage Mockup</h4>
-            <p>Create wireframes and mockups for the new homepage redesign project.</p>
+            <p>Create wireframes and high-fidelity mockups for the new homepage redesign project with modern UI elements.</p>
             <div class="meta"><span>📅 Oct 20, 2025</span></div> 
-            <div class="meta"><span>👤 Sarah Johnson</span></div>
+            <div class="meta"><span>👤 Sarah Johnson</span></div> <hr>
             <div class="tags"><span class="priority high">● HIGH</span><span class="status in-progress"><span class="dot-progress">●</span> In Progress</span></div>
           </div>
 
@@ -134,7 +144,7 @@
             <h4>Fix Login Authentication Bug</h4>
             <p>Resolve the issue where users are logged out unexpectedly after inactivity.</p>
             <div class="meta"><span>📅 Oct 15, 2025</span></div>
-            <div class="meta"><span>👤 Michael Chen</span></div>
+            <div class="meta"><span>👤 Michael Chen</span></div> <hr>
             <div class="tags"><span class="priority high">● HIGH</span><span class="status pending"><span class="dot-pending">●</span> Pending</span></div>
           </div>
 
@@ -142,7 +152,7 @@
             <h4>Update Documentation</h4>
             <p>Review and update the API documentation with the latest endpoint changes.</p>
             <div class="meta"><span>📅 Oct 25, 2025</span> </div>
-            <div class="meta"><span>👤 Emily Rodriguez</span></div>
+            <div class="meta"><span>👤 Emily Rodriguez</span></div> <hr>
             <div class="tags"><span class="priority medium">● MEDIUM</span><span class="status in-progress"><span class="dot-progress">●</span> In Progress</span></div>
           </div>
 
@@ -150,7 +160,7 @@
             <h4>Database Optimization</h4>
             <p>Optimize slow queries to improve overall database performance.</p>
             <div class="meta"><span>📅 Oct 30, 2025</span></div>
-            <div class="meta"> <span>👤 David Kim</span></div>
+            <div class="meta"> <span>👤 David Kim</span></div> <hr>
             <div class="tags"><span class="priority medium">● MEDIUM</span><span class="status pending"><span class="dot-pending">●</span> Pending</span></div>
           </div>
 
@@ -158,7 +168,7 @@
             <h4>Implement Dark Mode</h4>
             <p>Add dark mode support with preference persistence.</p>
             <div class="meta"><span>📅 Nov 05, 2025</span></div> 
-            <div class="meta"> <span>👤 Alex Thompson</span></div>
+            <div class="meta"> <span>👤 Alex Thompson</span></div> <hr>
             <div class="tags"><span class="priority low">● LOW</span><span class="status pending"><span class="dot-pending">●</span> Pending</span></div>
           </div>
 
@@ -166,7 +176,7 @@
             <h4>User Testing Session</h4>
             <p>Conduct user testing sessions to gather feedback on the interface.</p>
             <div class="meta"><span>📅 Oct 28, 2025</span></div> 
-             <div class="meta"><span>👤 Lisa Anderson</span></div>
+             <div class="meta"><span>👤 Lisa Anderson</span></div> <hr> <br>
             <div class="tags"><span class="priority high">● HIGH</span><span class="status completed"><span class="dot-completed">●</span> Completed</span></div>
           </div>
         </div>
