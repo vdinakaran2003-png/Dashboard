@@ -784,6 +784,7 @@ h4 {
   .footer-container {
     flex-direction: column;
     text-align: center;
+    margin-top: -20px;
   }
 
   .footer-col {
