@@ -70,7 +70,7 @@ html, body {
 .nav-links a.active {
   background: #e9edff;
   color: #624bff;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .nav-links a:hover {
