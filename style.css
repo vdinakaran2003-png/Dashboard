@@ -43,6 +43,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5px;
 }
 
 .logo h1 {
@@ -54,6 +55,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 25px;
+  margin-right: 20px;
 }
 
 .nav-links a {
@@ -83,7 +85,8 @@ html, body {
 
 .dashboard {
   padding: 30px 5px;
-  margin-right: 1px;
+  margin: 1px;
+  gap: 10px;
 }
 
 .dashboard-title {
@@ -428,7 +431,7 @@ h4 {
 .task-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 25px;
+  gap: 20px;
 }
 
 .task-card {
