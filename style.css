@@ -231,8 +231,14 @@ input[type="color"] {
   align-items: center;
   margin-top: -15px;
 }
-.progress-container input[type="range"]{
+
+.progress-container input[type="range"] {
   width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  accent-color: #4f46e5; 
 }
 
 .Percent{
