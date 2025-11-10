@@ -926,6 +926,15 @@ h4 {
     grid-template-columns: 1fr;
     gap: 15px;
   }
+  .footer {
+  background-color: #ffffff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 65px;
+  margin-right: -75px;
+  margin-left: -70px;
+}
 
   .footer-container {
     flex-direction: column;
