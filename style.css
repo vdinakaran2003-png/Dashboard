@@ -528,7 +528,6 @@ h4 {
 }
 
 .footer-col {
-  flex: 1;
   min-width: 220px;
   margin: 0px 20px 20px 45px;
 }
@@ -725,7 +724,7 @@ h4 {
   }
 
   .create-task {
-    width: 130%;
+    width: 135%;
     padding: 15px;
     background: #fff;
     border-radius: 10px;
@@ -758,7 +757,7 @@ h4 {
   }
 
   .active-tasks {
-    width: 130%;
+    width: 135%;
     padding: 15px;
     background: #fff;
     border-radius: 10px;
@@ -1074,7 +1073,7 @@ h4 {
   .task-card h4 {
     font-size: 16px;
   }
-  
+
   .footer {
   background-color: #ffffff;
   padding: 40px 0;
